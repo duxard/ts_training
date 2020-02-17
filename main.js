@@ -9,6 +9,22 @@ function sum(a, b) {
     return a + b;
 }
 cl(sum(2, 3));
+var a2 = ['a'];
+var MyMock = (function () {
+    function MyMock() {
+        this.time = new Date();
+        this.sayHi = function () { return console.log('hi'); };
+    }
+    MyMock.prototype.getTime = function () {
+        return new Date();
+    };
+    MyMock.prototype.getNum = function () {
+        return null;
+    };
+    return MyMock;
+})();
+/****************************/
+var foo = function (a, b) { return a + b; };
 /*
 
 class Animal {

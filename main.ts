@@ -1,4 +1,5 @@
 
+
 const cl = console.log;
 
 let str: string;
@@ -15,6 +16,33 @@ function sum(a: number ,b: number):number {
 }
 
 cl( sum(2,3) );
+
+let a2: Array<string> = ['a'];
+
+interface IMock {
+    time: Date;
+    getTime(): Date;
+    sayHi(): void;
+    getNum: () => number;
+}
+
+class MyMock implements IMock {
+    time: Date = new Date();
+
+    getTime(){
+        return new Date();
+    }
+
+    sayHi = () => console.log('hi');
+
+    getNum(){
+        return null;
+    }
+}
+
+/****************************/
+
+let foo = (a: number, b:number):number => a+b;
 
 /*
 

@@ -40,6 +40,8 @@ class Dog extends canTalk(canFly(Animal)) {
     console.log('Woof!');
     return this;
   }
+
+  yap = () => console.log();
 }
 
 
